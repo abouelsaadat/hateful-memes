@@ -1,0 +1,73 @@
+optimizer = torch.optim.AdamW([
+    {"params": model.visualbert.parameters(), "lr": 2e-5, "weight_decay": 0},
+    {"params": model.classifier.parameters(),  "lr": 2e-3, "weight_decay": 1e-5},
+])
+
+Epoch 0
+Val Loss: 2.0465 | ACC: 0.6141 | F1: 0.0000 | AUC: 0.5029
+Epoch 1
+Train Loss: 169.5963 | ACC: 0.6400 | F1: 0.5358 | AUC: 0.6860
+Val Loss: 2.0035 | ACC: 0.6109 | F1: 0.3882 | AUC: 0.6360
+Epoch 2
+Train Loss: 137.9868 | ACC: 0.7588 | F1: 0.6718 | AUC: 0.8182
+Val Loss: 2.0039 | ACC: 0.6297 | F1: 0.4925 | AUC: 0.6661
+Epoch 3
+Train Loss: 113.7144 | ACC: 0.8075 | F1: 0.7408 | AUC: 0.8842
+Val Loss: 2.0152 | ACC: 0.6531 | F1: 0.5316 | AUC: 0.6868
+Epoch 4
+Train Loss: 89.0332 | ACC: 0.8562 | F1: 0.8089 | AUC: 0.9314
+Val Loss: 2.6209 | ACC: 0.6641 | F1: 0.5316 | AUC: 0.6831
+Epoch 5
+Train Loss: 70.1693 | ACC: 0.8845 | F1: 0.8462 | AUC: 0.9571
+Val Loss: 2.9701 | ACC: 0.6656 | F1: 0.4541 | AUC: 0.6900
+Epoch 6
+Train Loss: 55.6254 | ACC: 0.9118 | F1: 0.8818 | AUC: 0.9730
+Val Loss: 2.5857 | ACC: 0.6766 | F1: 0.5470 | AUC: 0.6884
+Epoch 7
+Train Loss: 42.5944 | ACC: 0.9333 | F1: 0.9098 | AUC: 0.9837
+Val Loss: 3.0347 | ACC: 0.6609 | F1: 0.4642 | AUC: 0.6903
+Epoch 8
+Train Loss: 35.2333 | ACC: 0.9445 | F1: 0.9246 | AUC: 0.9885
+Val Loss: 3.9442 | ACC: 0.6625 | F1: 0.5242 | AUC: 0.6903
+Epoch 9
+Train Loss: 29.0847 | ACC: 0.9556 | F1: 0.9393 | AUC: 0.9924
+Val Loss: 4.6437 | ACC: 0.6484 | F1: 0.4731 | AUC: 0.6785
+Epoch 10
+Train Loss: 21.9232 | ACC: 0.9678 | F1: 0.9555 | AUC: 0.9954
+Val Loss: 4.3355 | ACC: 0.6547 | F1: 0.5056 | AUC: 0.6883
+Epoch 11
+Train Loss: 23.8712 | ACC: 0.9647 | F1: 0.9514 | AUC: 0.9948
+Val Loss: 4.9259 | ACC: 0.6641 | F1: 0.4327 | AUC: 0.6967
+Epoch 12
+Train Loss: 17.8204 | ACC: 0.9764 | F1: 0.9671 | AUC: 0.9966
+Val Loss: 4.7512 | ACC: 0.6687 | F1: 0.4976 | AUC: 0.6923
+Epoch 13
+Train Loss: 16.1294 | ACC: 0.9794 | F1: 0.9713 | AUC: 0.9972
+Val Loss: 4.4559 | ACC: 0.6594 | F1: 0.3807 | AUC: 0.6937
+Epoch 14
+Train Loss: 13.7081 | ACC: 0.9807 | F1: 0.9731 | AUC: 0.9981
+Val Loss: 5.2139 | ACC: 0.6641 | F1: 0.4769 | AUC: 0.6987
+Epoch 15
+Train Loss: 13.5483 | ACC: 0.9824 | F1: 0.9753 | AUC: 0.9983
+Val Loss: 5.1359 | ACC: 0.6656 | F1: 0.4953 | AUC: 0.7045
+Epoch 16
+Train Loss: 10.2582 | ACC: 0.9874 | F1: 0.9824 | AUC: 0.9988
+Val Loss: 6.4723 | ACC: 0.6625 | F1: 0.4066 | AUC: 0.6882
+Epoch 17
+Train Loss: 11.2688 | ACC: 0.9875 | F1: 0.9826 | AUC: 0.9985
+Val Loss: 5.0066 | ACC: 0.6734 | F1: 0.4788 | AUC: 0.6917
+Epoch 18
+Train Loss: 8.6566 | ACC: 0.9887 | F1: 0.9842 | AUC: 0.9991
+Val Loss: 6.2969 | ACC: 0.6438 | F1: 0.4062 | AUC: 0.6754
+Epoch 19
+Train Loss: 8.1531 | ACC: 0.9895 | F1: 0.9853 | AUC: 0.9991
+Val Loss: 7.3687 | ACC: 0.6547 | F1: 0.4377 | AUC: 0.6726
+Epoch 20
+Train Loss: 8.8460 | ACC: 0.9902 | F1: 0.9863 | AUC: 0.9989
+Val Loss: 6.4510 | ACC: 0.6875 | F1: 0.5215 | AUC: 0.7077
+--> Saved best model (AUC=0.7077)
+
+Test Loss: 26.971502661705017
+Test Acc: 0.682
+Test F1: 0.5364431486880467
+Test AUC: 0.719469620601173
